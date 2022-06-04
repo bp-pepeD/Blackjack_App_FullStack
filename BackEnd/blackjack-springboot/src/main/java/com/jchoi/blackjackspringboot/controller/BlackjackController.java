@@ -29,14 +29,9 @@ public class BlackjackController {
         return new ResponseEntity<>(blackjackService.getCurrentGameState(), HttpStatus.OK);
     }
 
-    //    @PostMapping("/game/{gameId}")
-//    public ResponseEntity<?> updateGame(@RequestParam("action") Action action) {
-//        return new ResponseEntity<>(blackjackService.updateGame(action), HttpStatus.OK);
-//    }
-
-//    TODO: to be deleted, for instructional purposes
     @PostMapping("/game/{gameId}")
-    public ResponseEntity<?> updateGame(@RequestParam("action") String action) {
+    public ResponseEntity<?> updateGame(@RequestParam("action") Action action) {
         return new ResponseEntity<>(blackjackService.updateGame(action), HttpStatus.OK);
     }
+
 }
